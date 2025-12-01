@@ -8,6 +8,7 @@ import Properties from './pages/Properties';
 import PropertyDetail from './pages/PropertyDetail';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Commercial from './pages/Commercial';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/property/:id" element={<PropertyDetail />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/commercial" element={<Commercial />} />
             </Routes>
           </main>
           <Footer />

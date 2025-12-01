@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Home, Search, Building2, Phone, Menu, X } from 'lucide-react';
+import { Home, Search, Building2, Phone, Menu, X, Briefcase } from 'lucide-react';
 import CTAButton from './CTAButton';
 
 const Navbar = () => {
@@ -20,6 +20,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', path: '/', icon: Home },
     { name: 'Properties', path: '/properties', icon: Building2 },
+    { name: 'Commercial', path: '/commercial', icon: Briefcase },
     { name: 'About', path: '/about', icon: Search },
     { name: 'Contact', path: '/contact', icon: Phone },
   ];

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Tilt } from 'react-tilt';
+import { Link } from 'react-router-dom';
 import { MapPin, Bed, Bath, Square, Star } from 'lucide-react';
 import CTAButton from './CTAButton';
 
@@ -133,14 +134,15 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 
           {/* Action Buttons */}
           <div className="flex space-x-2">
-            <CTAButton
-              variant="outline"
-              size="sm"
-              className="flex-1 text-center"
-              onClick={() => console.log('View details:', property.id)}
-            >
-              View Details
-            </CTAButton>
+           <Link to={`/property/${property.id}`} className="flex-1">
+              <CTAButton
+                variant="outline"
+                size="sm"
+                className="w-full text-center"
+              >
+                View Details
+              </CTAButton>
+            </Link>
             <CTAButton
               variant="primary"
               size="sm"

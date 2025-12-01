@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Filter, Grid, Map, SortAsc, Search } from 'lucide-react';
 import PropertyCard from '../components/PropertyCard';
 import CTAButton from '../components/CTAButton';
+import SearchBar from '../components/SearchBar';
 
 const Properties = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid');
@@ -23,7 +24,7 @@ const Properties = () => {
       title: 'Luxury 4BHK Penthouse in Sector 62',
       location: 'Sector 62',
       sector: 'Noida',
-      image: '/images/properties/penthouse-1.jpg',
+      image: 'https://placehold.co/600x400/E5E7EB/1F2937',
       beds: 4,
       baths: 4,
       sqft: 3200,
@@ -31,7 +32,7 @@ const Properties = () => {
       rating: 4.9,
       agent: {
         name: 'Rajesh Kumar',
-        image: '/images/agents/agent-1.jpg',
+        image: 'https://placehold.co/100x100/E5E7EB/1F2937',
       },
     },
     {
@@ -39,7 +40,7 @@ const Properties = () => {
       title: 'Modern 3BHK Apartment in Greater Noida West',
       location: 'Sector 1',
       sector: 'Greater Noida West',
-      image: '/images/properties/apartment-modern-1.jpg',
+      image: 'https://placehold.co/600x400/E5E7EB/1F2937',
       beds: 3,
       baths: 2,
       sqft: 1850,
@@ -47,7 +48,7 @@ const Properties = () => {
       rating: 4.7,
       agent: {
         name: 'Priya Sharma',
-        image: '/images/agents/agent-2.jpg',
+        image: 'https://placehold.co/100x100/E5E7EB/1F2937',
       },
     },
     {
@@ -55,7 +56,7 @@ const Properties = () => {
       title: 'Spacious Villa with Private Garden',
       location: 'Sector 150',
       sector: 'Noida',
-      image: '/images/properties/villa-garden-2.jpg',
+      image: 'https://placehold.co/600x400/E5E7EB/1F2937',
       beds: 5,
       baths: 4,
       sqft: 4500,
@@ -63,7 +64,7 @@ const Properties = () => {
       rating: 4.8,
       agent: {
         name: 'Amit Singh',
-        image: '/images/agents/agent-3.jpg',
+        image: 'https://placehold.co/100x100/E5E7EB/1F2937',
       },
     },
     {
@@ -71,7 +72,7 @@ const Properties = () => {
       title: 'Eco-Friendly Farmhouse in Sector 135',
       location: 'Sector 135',
       sector: 'Noida Expressway',
-      image: '/images/properties/farmhouse-eco-1.jpg',
+      image: 'https://placehold.co/600x400/E5E7EB/1F2937',
       beds: 6,
       baths: 5,
       sqft: 7200,
@@ -79,7 +80,7 @@ const Properties = () => {
       rating: 4.6,
       agent: {
         name: 'Sneha Gupta',
-        image: '/images/agents/agent-4.jpg',
+        image: 'https://placehold.co/100x100/E5E7EB/1F2937',
       },
     },
     {
@@ -87,7 +88,7 @@ const Properties = () => {
       title: 'Studio Apartment for Young Professionals',
       location: 'Sector 18',
       sector: 'Noida',
-      image: '/images/properties/studio-1.jpg',
+      image: 'https://placehold.co/600x400/E5E7EB/1F2937',
       beds: 1,
       baths: 1,
       sqft: 650,
@@ -95,7 +96,7 @@ const Properties = () => {
       rating: 4.4,
       agent: {
         name: 'Rohit Malhotra',
-        image: '/images/agents/agent-5.jpg',
+        image: 'https://placehold.co/100x100/E5E7EB/1F2937',
       },
     },
     {
@@ -103,7 +104,7 @@ const Properties = () => {
       title: 'Family-Friendly 2BHK in Sector 76',
       location: 'Sector 76',
       sector: 'Noida',
-      image: '/images/properties/family-apartment-1.jpg',
+      image: 'https://placehold.co/600x400/E5E7EB/1F2937',
       beds: 2,
       baths: 2,
       sqft: 1200,
@@ -111,7 +112,7 @@ const Properties = () => {
       rating: 4.5,
       agent: {
         name: 'Kavita Joshi',
-        image: '/images/agents/agent-6.jpg',
+        image: 'https://placehold.co/100x100/E5E7EB/1F2937',
       },
     },
   ];
@@ -233,7 +234,9 @@ const Properties = () => {
           </div>
         </div>
       </div>
-
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
+        <SearchBar />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Filters Sidebar */}
